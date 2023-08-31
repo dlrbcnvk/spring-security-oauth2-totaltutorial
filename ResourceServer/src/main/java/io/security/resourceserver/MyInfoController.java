@@ -35,7 +35,9 @@ public class MyInfoController {
         Photo photo1 = PhotoService.getBuild("1 ", "Album1 title ", "Album is nice ", "user1");
         Photo photo2 = PhotoService.getBuild("2 ", "Album2 title ", "Album is beautiful ", "user2");
 
-        return MyInfo.builder().photos(Arrays.asList(photo1, photo2)).friends(response.getBody()).build();
-
+        return MyInfo.builder()
+                .photos(Arrays.asList(photo1, photo2))
+                .friends(response.getBody())
+                .build();
     }
 }
